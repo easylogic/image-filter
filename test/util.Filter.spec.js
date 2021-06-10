@@ -1,5 +1,5 @@
 import Filter from '../src/util/Filter'
-import Color from '../src/util/Color'
+import Color from "@easylogic/color";
 
 test('gray filter', () => {
     const colorCode = Color.parse('#255050');

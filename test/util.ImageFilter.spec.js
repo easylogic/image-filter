@@ -1,5 +1,5 @@
 import ImageFilter from '../src/util/ImageFilter'
-import Color from '../src/util/Color'
+import Color from "@easylogic/color";
 
 test('image gray filter', () => {
     const colorCode = Color.parse('#255050');

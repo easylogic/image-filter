@@ -1,4 +1,4 @@
-import Color from '../src/util/Color'
+import Color from "@easylogic/color";
 
 
 test('Color parse for rgb', () => {

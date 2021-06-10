@@ -322,7 +322,7 @@ function stackBlurCanvasRGBA(bitmap, top_x, top_y, radius) {
 }
 
 
-function stackBlurCanvasRGBA(bitmap, top_x, top_y, radius) {
+function stackBlurCanvasRGB(bitmap, top_x, top_y, radius) {
     if (isNaN(radius) || radius < 1) return bitmap;
     radius |= 0;
 

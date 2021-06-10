@@ -1,4 +1,4 @@
-import Color from './Color'
+import Color from "@easylogic/color";
 
 function each(len, callback) {
     for (var i = 0; i < len; i += 4) {

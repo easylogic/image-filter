@@ -1,7 +1,8 @@
+import Color from "@easylogic/color";
+
 import Canvas from '../Canvas'
 import Matrix from '../Matrix'
 import ImageFilter from './index' 
-import Color from '../Color'
 
 let makeId = 0 
 
@@ -642,7 +643,7 @@ export function matches (str) {
     }
 
     result = matches.map((it) => {
-        return { filter: it, origin: Color.reverseMatches(it, ret.matches) }
+        return { filter: it, origin: EasyLogicColor.reverseMatches(it, ret.matches) }
     })
 
     var pos = { next: 0 }
@@ -676,7 +677,7 @@ export function matches (str) {
  */
 export function parseFilter (filterString) {
 
-    var ret = Color.convertMatches(filterString)
+    var ret = EasyLogicColor.convertMatches(filterString)
     const matches = ret.str.match(filter_regexp);
 
     if (!matches[0]) {
@@ -690,11 +691,11 @@ export function parseFilter (filterString) {
 
     if (arr.length) {
         filterParams = arr.shift().split(')')[0].split(',').map(f => {
-            return Color.reverseMatches(f, ret.matches)
+            return EasyLogicColor.reverseMatches(f, ret.matches)
         })    
     }
     
-    var result = [filterName, ...filterParams].map(Color.trim)
+    var result = [filterName, ...filterParams].map(EasyLogicColor.trim)
     
     return result 
 }

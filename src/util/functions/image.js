@@ -1,8 +1,9 @@
 import kmeans from '../Kmeans'
 import ImageLoader from '../ImageLoader'
 import Canvas from '../Canvas'
-// import GL from '../GL' 
-import { format } from './formatter'
+
+import Color from "@easylogic/color";
+
 
 export function palette(colors, k = 6, exportFormat = 'hex') {
 
@@ -11,7 +12,7 @@ export function palette(colors, k = 6, exportFormat = 'hex') {
     }
 
     return colors.map(c => {
-        return format(c, exportFormat);
+        return Color.format(c, exportFormat);
     }); 
 }
 
@@ -52,17 +53,6 @@ export function ImageToURL(url, filter, callback, opt = { frameTimer : 'full'}) 
         }, opt);
     })
 }
-
-// export function GLToCanvas (url, filter, callback, opt = {}) {
-//     var img = new ImageLoader(url);
-//     img.load(() => {
-//         GL.filter(img.newImage, filter, function done (datauri) {
-//             if (typeof callback == 'function') {
-//                 callback(datauri)
-//             }
-//         }, opt)
-//     })
-// }
 
 export function histogram (url, callback, opt = {}) {
     var img = new ImageLoader(url);
@@ -139,7 +129,6 @@ export default {
     ImageToHistogram,
     ImageToRGB,
     ImageToURL,
-    // GLToCanvas,
     histogram,
     histogramToPoints
 }

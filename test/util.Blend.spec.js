@@ -1,5 +1,5 @@
 import Blender from '../src/util/Blender'
-import Color from '../src/util/Color'
+import Color from "@easylogic/color";
 
 test('Blend - normal', () => {
     const back = Color.parse('#255050');

@@ -1,8 +1,10 @@
-import Color from '../../Color'
 import {
     // clamp,
     pixel
 } from '../functions'
+
+import Color from "@easylogic/color";
+
 /**
  * F.gradient('red', 'blue', 'yellow', 'white', 10)
  * F.gradient('red, blue, yellow, white, 10')
@@ -18,7 +20,7 @@ export default function gradient () {
     } 
 
     params = params.map(arg => {
-        const res = Color.matches(arg)
+        const res = Color.matches(arg) 
 
         if (!res.length) {
             return { type: 'scale', value : arg }

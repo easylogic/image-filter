@@ -1,15 +1,11 @@
-import Color from './Color'
-import HueColor from './HueColor'
-import ColorNames from './ColorNames'
 import ImageFilter from './ImageFilter'
 import Canvas from './Canvas'
 import ImageLoader from './ImageLoader'
+import image from './functions/image'
 
 export default {
-    Color, 
-    HueColor,
-    ColorNames,
+    ...image,
     ImageFilter,
     Canvas, 
     ImageLoader
-}
+} 
