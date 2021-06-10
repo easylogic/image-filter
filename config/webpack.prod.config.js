@@ -11,8 +11,9 @@ module.exports = {
     },
     path: path.resolve(__dirname, '../dist'),
     filename: 'image-filter.js',
-
-
+  },
+  externals: {
+    "@easylogic/color": '@easylogic/color',
   },
   resolve: {
     extensions: [".js"]
