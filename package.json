@@ -1,6 +1,6 @@
 {
   "name": "@easylogic/image-filter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple bitmap image filter with easylogic",
   "main": "./dist/image-filter.js",
   "scripts": {
